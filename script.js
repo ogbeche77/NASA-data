@@ -9,15 +9,17 @@ async function getData() { //named async bcos its an asynchronous function makin
    //parse the csv; meaning breaking up the data and arranging it objects etc
     //we use the split function here to put the element in an array
    
-    //we can split by line break since each row is demacated by a line break
-    const rows = data.split("\n");
-    console.log(rows);
-
-
-
-   
-    
-
+    //we can split the table with line break since each row is demacated by a line break
+    const table = data.split("\n");
+    //row refers to the rows in the table and 
+    //first 3 rows are splited in column
+    table.forEach(row =>{
+        const columns =row.split(",");
+        const year =columns[0];
+        const temp =columns[1];
+        const tempN = columns[2];
+        console.log(year, temp, tempN);
+    });
 }
 
 getData();
