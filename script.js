@@ -4,11 +4,11 @@
 async function getData() {
   //named async bcos its an asynchronous function making asynchronous calls
   const response = await fetch("nasaData.csv");
-  const data = await response.text(); //we decide to receive data as text. it could also be json,blob,arraybuffer,redirect etc
+  const data = await response.text(); //we decide to receive data as text. it could also be json,blob,arraybuffer etc
   console.log(data);
 
   //parse the csv; meaning breaking up the data and arranging it objects etc
-  //we use the split function here to put the element in an array
+  //split takes in a parametr & create an array of substring
 
   //we can split the table with line break since each row is demacated by a "\n"
   //table could also be demacated with \, \. etc
